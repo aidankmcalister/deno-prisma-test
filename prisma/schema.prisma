@@ -19,4 +19,3 @@ model Dino {
   id    String @id @default(cuid())
   name  String
 }
-  

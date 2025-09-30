@@ -3,11 +3,13 @@
   "specifiers": {
     "npm:@eslint/eslintrc@3": "3.3.1",
     "npm:@prisma/client@^6.16.2": "6.16.2_prisma@6.16.2__typescript@5.9.2_typescript@5.9.2",
+    "npm:@prisma/extension-accelerate@^2.0.2": "2.0.2_@prisma+client@6.16.2__prisma@6.16.2___typescript@5.9.2__typescript@5.9.2_prisma@6.16.2__typescript@5.9.2_typescript@5.9.2",
     "npm:@tailwindcss/postcss@4": "4.1.13",
     "npm:@types/node@*": "24.2.0",
     "npm:@types/node@^24.6.0": "24.6.0",
     "npm:@types/react-dom@19": "19.1.9_@types+react@19.1.16",
     "npm:@types/react@19": "19.1.16",
+    "npm:dotenv-cli@10": "10.0.0",
     "npm:dotenv@^17.2.3": "17.2.3",
     "npm:eslint-config-next@15.5.3": "15.5.3_eslint@9.36.0_typescript@5.9.2_@typescript-eslint+parser@8.45.0__eslint@9.36.0__typescript@5.9.2_eslint-plugin-import@2.32.0__eslint@9.36.0",
     "npm:eslint@9": "9.36.0",
@@ -444,6 +446,12 @@
         "@prisma/get-platform"
       ],
       "scripts": true
+    },
+    "@prisma/extension-accelerate@2.0.2_@prisma+client@6.16.2__prisma@6.16.2___typescript@5.9.2__typescript@5.9.2_prisma@6.16.2__typescript@5.9.2_typescript@5.9.2": {
+      "integrity": "sha512-yZK6/k7uOEFpEsKoZezQS1CKDboPtBCQ0NyI70e1Un8tDiRgg80iWGyjsJmRpps2ZIut3MroHP+dyR3wVKh8lA==",
+      "dependencies": [
+        "@prisma/client"
+      ]
     },
     "@prisma/fetch-engine@6.16.2": {
       "integrity": "sha512-wPnZ8DMRqpgzye758ZvfAMiNJRuYpz+rhgEBZi60ZqDIgOU2694oJxiuu3GKFeYeR/hXxso4/2oBC243t/whxQ==",
@@ -1144,6 +1152,22 @@
       "integrity": "sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==",
       "dependencies": [
         "esutils"
+      ]
+    },
+    "dotenv-cli@10.0.0": {
+      "integrity": "sha512-lnOnttzfrzkRx2echxJHQRB6vOAMSCzzZg79IxpC00tU42wZPuZkQxNNrrwVAxaQZIIh001l4PxVlCrBxngBzA==",
+      "dependencies": [
+        "cross-spawn",
+        "dotenv@17.2.3",
+        "dotenv-expand",
+        "minimist"
+      ],
+      "bin": true
+    },
+    "dotenv-expand@11.0.7": {
+      "integrity": "sha512-zIHwmZPRshsCdpMDyVsqGmgyP0yT8GAgXUnkdAoJisxvf33k7yO6OuoKmcTGuXPWSsm8Oh88nZicRLA9Y0rUeA==",
+      "dependencies": [
+        "dotenv@16.6.1"
       ]
     },
     "dotenv@16.6.1": {
@@ -2908,10 +2932,12 @@
       "dependencies": [
         "npm:@eslint/eslintrc@3",
         "npm:@prisma/client@^6.16.2",
+        "npm:@prisma/extension-accelerate@^2.0.2",
         "npm:@tailwindcss/postcss@4",
         "npm:@types/node@^24.6.0",
         "npm:@types/react-dom@19",
         "npm:@types/react@19",
+        "npm:dotenv-cli@10",
         "npm:dotenv@^17.2.3",
         "npm:eslint-config-next@15.5.3",
         "npm:eslint@9",
