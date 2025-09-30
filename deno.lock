@@ -3,7 +3,6 @@
   "specifiers": {
     "npm:@eslint/eslintrc@3": "3.3.1",
     "npm:@prisma/client@^6.16.2": "6.16.2_prisma@6.16.2__typescript@5.9.2_typescript@5.9.2",
-    "npm:@prisma/extension-accelerate@^2.0.2": "2.0.2_@prisma+client@6.16.2__prisma@6.16.2___typescript@5.9.2__typescript@5.9.2_prisma@6.16.2__typescript@5.9.2_typescript@5.9.2",
     "npm:@tailwindcss/postcss@4": "4.1.13",
     "npm:@types/node@*": "24.2.0",
     "npm:@types/node@^24.6.0": "24.6.0",
@@ -15,7 +14,6 @@
     "npm:eslint@9": "9.36.0",
     "npm:next@15.5.3": "15.5.3_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:next@latest": "15.5.4_react@19.1.0_react-dom@19.1.0__react@19.1.0",
-    "npm:prisma@*": "6.16.2_typescript@5.9.2",
     "npm:prisma@^6.16.2": "6.16.2_typescript@5.9.2",
     "npm:react-dom@19.1.0": "19.1.0_react@19.1.0",
     "npm:react@19.1.0": "19.1.0",
@@ -446,12 +444,6 @@
         "@prisma/get-platform"
       ],
       "scripts": true
-    },
-    "@prisma/extension-accelerate@2.0.2_@prisma+client@6.16.2__prisma@6.16.2___typescript@5.9.2__typescript@5.9.2_prisma@6.16.2__typescript@5.9.2_typescript@5.9.2": {
-      "integrity": "sha512-yZK6/k7uOEFpEsKoZezQS1CKDboPtBCQ0NyI70e1Un8tDiRgg80iWGyjsJmRpps2ZIut3MroHP+dyR3wVKh8lA==",
-      "dependencies": [
-        "@prisma/client"
-      ]
     },
     "@prisma/fetch-engine@6.16.2": {
       "integrity": "sha512-wPnZ8DMRqpgzye758ZvfAMiNJRuYpz+rhgEBZi60ZqDIgOU2694oJxiuu3GKFeYeR/hXxso4/2oBC243t/whxQ==",
@@ -2932,7 +2924,6 @@
       "dependencies": [
         "npm:@eslint/eslintrc@3",
         "npm:@prisma/client@^6.16.2",
-        "npm:@prisma/extension-accelerate@^2.0.2",
         "npm:@tailwindcss/postcss@4",
         "npm:@types/node@^24.6.0",
         "npm:@types/react-dom@19",
