@@ -1,6 +1,6 @@
 {
   "nodeModulesDir": "auto",
-  "unstable": ["unsafe-proto", "sloppy-imports"],
+  "unstable": ["unsafe-proto"],
   "compilerOptions": {
     "lib": ["deno.ns", "dom", "dom.iterable", "esnext"],
     "strict": true,
