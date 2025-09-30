@@ -1,14 +1,33 @@
-import prisma from "../lib/prisma.ts";
+"use client";
+import { Dino } from "./generated/prisma/client.ts";
+import { useEffect, useState } from "react";
 
-export default async function Home() {
-  const dinos = await prisma.dino.findMany();
-  console.log(dinos);
+export default function Home() {
+  const [dinos, setDinos] = useState<Dino[]>([]);
+
+  useEffect(() => {
+    const fetchDinos = async () => {
+      const response = await fetch("/api/dinos");
+      const data = await response.json();
+      setDinos(data);
+    };
+
+    fetchDinos();
+  }, []);
+
   return (
-    <div className="h-screen flex items-center justify-center text-white">
-      <h1>Dinosaurs</h1>
-      {dinos.map((dino) => (
-        <div key={dino.id}>{dino.name}</div>
-      ))}
+    <div className="h-screen flex flex-col items-center justify-center text-white">
+      <h1 className="text-2xl mb-2">Dinosaurs</h1>
+      <ul className="grid grid-cols-2 gap-2">
+        {dinos.map((dino) => (
+          <li
+            className="p-3 text-center rounded-md bg-neutral-900"
+            key={dino.id}
+          >
+            {dino.name}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

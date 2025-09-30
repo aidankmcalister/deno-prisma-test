@@ -4,30 +4,48 @@ const prisma = new PrismaClient({
   datasourceUrl: Deno.env.get("DATABASE_URL"),
 });
 
-const dinosaurData: Prisma.DinoCreateInput[] = [
-  {
-    name: "Aardonyx",
-  },
-  {
-    name: "Abelisaurus",
-  },
-  {
-    name: "Acanthopholis",
-  },
+const dinosaurNames = [
+  "Tyrannosaurus",
+  "Velociraptor",
+  "Triceratops",
+  "Stegosaurus",
+  "Brachiosaurus",
+  "Pterodactyl",
+  "Ankylosaurus",
+  "Dilophosaurus",
+  "Spinosaurus",
+  "Parasaurolophus",
+  "Apatosaurus",
+  "Allosaurus",
+  "Compsognathus",
+  "Gallimimus",
+  "Iguanodon",
+  "Megalosaurus",
+  "Oviraptor",
+  "Plesiosaurus",
+  "Quetzalcoatlus",
+  "Styracosaurus",
+  "Therizinosaurus",
+  "Troodon",
+  "Utahraptor",
+  "Carnotaurus",
 ];
 
-for (const u of dinosaurData) {
-  const dinosaur = await prisma.dino.create({
-    data: u,
-  });
-  console.log(`Created dinosaur with id: ${dinosaur.id}`);
+async function seed() {
+  const dinosaurData: Prisma.DinoCreateInput[] = dinosaurNames.map((name) => ({
+    name,
+  }));
+
+  await prisma.dino.deleteMany();
+
+  for (const u of dinosaurData) {
+    await prisma.dino.create({
+      data: u,
+    });
+  }
+  console.log(`Seeding finished.`);
 }
-console.log(`Seeding finished.`);
+
+seed();
 
 await prisma.$disconnect();
-
-// function main() {
-//   console.log("Hello world");
-// }
-
-// main();
