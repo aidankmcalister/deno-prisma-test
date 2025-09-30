@@ -7,7 +7,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "deno run -A npm:prisma generate"
+    "postinstall": "prisma generate --no-engine"
   },
   "prisma": {
     "seed": "deno run prisma/seed.ts"
