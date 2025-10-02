@@ -1,7 +1,8 @@
 import { Prisma, PrismaClient } from "../app/generated/prisma/client.ts";
+import process from "node:process";
 
 const prisma = new PrismaClient({
-  datasourceUrl: Deno.env.get("DATABASE_URL"),
+  datasourceUrl: process.env.DATABASE_URL,
 });
 
 const dinosaurNames = [

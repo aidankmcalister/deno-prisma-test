@@ -1,4 +1,5 @@
 "use client";
+
 import { Dino } from "./generated/prisma/client.ts";
 import { useEffect, useState } from "react";
 
@@ -16,8 +17,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center text-white">
-      <h1 className="text-2xl mb-2">Dinosaurs</h1>
+    <div>
+      <h1 className="text-2xl mb-2 w-full">Dinosaurs</h1>
       <ul className="grid grid-cols-2 gap-2">
         {dinos.map((dino) => (
           <li

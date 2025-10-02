@@ -9,9 +9,6 @@
     "lint": "eslint",
     "postinstall": "prisma generate --no-engine"
   },
-  "prisma": {
-    "seed": "deno run prisma/seed.ts"
-  },
   "dependencies": {
     "@prisma/client": "^6.16.2",
     "@types/node": "^24.6.0",
