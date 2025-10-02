@@ -3,6 +3,7 @@
   "specifiers": {
     "npm:@eslint/eslintrc@3": "3.3.1",
     "npm:@prisma/client@^6.16.2": "6.16.2_prisma@6.16.2__typescript@5.9.2_typescript@5.9.2",
+    "npm:@prisma/nextjs-monorepo-workaround-plugin@^6.16.3": "6.16.3",
     "npm:@tailwindcss/postcss@4": "4.1.13",
     "npm:@types/node@^24.6.0": "24.6.0",
     "npm:@types/react-dom@19": "19.1.9_@types+react@19.1.16",
@@ -413,6 +414,9 @@
       "dependencies": [
         "@prisma/debug"
       ]
+    },
+    "@prisma/nextjs-monorepo-workaround-plugin@6.16.3": {
+      "integrity": "sha512-sTp5m7evUaQpcA9CdAqUYGYbrfPY7LBazIFTdgtMxHquDCVbzkkCHNguKs9xWoaNCWQKGWY6a+AxeASmLyJjPQ=="
     },
     "@rtsao/scc@1.1.0": {
       "integrity": "sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g=="
@@ -2846,6 +2850,7 @@
       "dependencies": [
         "npm:@eslint/eslintrc@3",
         "npm:@prisma/client@^6.16.2",
+        "npm:@prisma/nextjs-monorepo-workaround-plugin@^6.16.3",
         "npm:@tailwindcss/postcss@4",
         "npm:@types/node@^24.6.0",
         "npm:@types/react-dom@19",
