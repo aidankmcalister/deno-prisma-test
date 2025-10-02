@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1 className="text-2xl mb-2 w-full">Dinosaurs</h1>
+      <h1 className="text-2xl mb-2 w-full text-center">Dinosaurs</h1>
       <ul className="grid grid-cols-2 gap-2">
         {dinos.map((dino) => (
           <li
